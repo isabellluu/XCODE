@@ -59,25 +59,31 @@ int main()
     scanf("%f", &leg_b);
     
     /*II. Calculate Data
-     a. Call function ABC
-     ABC
+     a. Call function ABC*/
+     hypotenuse = abc(leg_a,leg_b);
+    
+    /*
      b. Place equation in ABC
      c. Call function sqrt
-     d. Place equation in sqrt  */
+     d. Place equation in sqrt  
+     e. Print out answer*/
+    printf("The hypotenuse length is %f.\n\n", hypotenuse);
+    
+    
     
     return 0;
 }
 
 /************************************* function ABC *************************************/
-int abc()
+double abc(float leg1, float leg2)
 {
     //define variables
-    float squaredleg;
-    float leg1;
-    float leg2;
+    double squaredleg;
+    double hypotenuse;
     
-    squaredleg = (leg1)*(leg1) + (leg1)*(leg1);
+    squaredleg = (leg1)*(leg1) + (leg2)*(leg2);
+    hypotenuse = sqrt(squaredleg);
     
-    return(squaredleg);
+    return(hypotenuse);
 }
 
